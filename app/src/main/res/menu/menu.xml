@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/firs"
+        android:enabled="true"
+        android:icon="@drawable/add"
+        android:title="목표추가"/>
+    <item
+        android:id="@+id/second"
+        android:enabled="true"
+        android:icon="@drawable/user"
+        android:title="유저"/>
+    <item
+        android:id="@+id/third"
+        android:enabled="true"
+        android:icon="@drawable/setting"
+        android:title="설정" />
+
+
+</menu>
