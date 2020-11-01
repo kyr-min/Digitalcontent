@@ -15,6 +15,7 @@
         android:background="@drawable/border"
         android:padding="3dp"
         android:text="1"
+        android:layout_marginBottom="40dp"
         android:textColor="@android:color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -89,77 +90,81 @@
         tools:ignore="HardcodedText" />
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/check_1"
         android:layout_width="20dp"
         android:layout_height="20dp"
         android:src="@drawable/check"
-        android:visibility="visible"
+        android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="@+id/text_stat_box1"
         app:layout_constraintEnd_toEndOf="@+id/text_stat_box1"
         android:contentDescription="checked"
         tools:ignore="HardcodedText" />
 
     <ImageView
+        android:id="@+id/check_2"
         android:layout_width="20dp"
         android:layout_height="20dp"
         android:src="@drawable/check"
-        android:visibility="visible"
+        android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="@+id/text_stat_box2"
         app:layout_constraintEnd_toEndOf="@+id/text_stat_box2"
         android:contentDescription="checked"
         tools:ignore="HardcodedText"/>
 
     <ImageView
+        android:id="@+id/check_3"
         android:layout_width="20dp"
         android:layout_height="20dp"
         android:src="@drawable/check"
-        android:visibility="visible"
+        android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="@+id/text_stat_box3"
         app:layout_constraintEnd_toEndOf="@+id/text_stat_box3"
         android:contentDescription="checked"
         tools:ignore="HardcodedText"/>
 
     <ImageView
+        android:id="@+id/check_4"
         android:layout_width="20dp"
         android:layout_height="20dp"
         android:src="@drawable/check"
-        android:visibility="visible"
+        android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="@+id/text_stat_box4"
         app:layout_constraintEnd_toEndOf="@+id/text_stat_box4"
         android:contentDescription="checked"
         tools:ignore="HardcodedText"/>
 
     <ImageView
+        android:id="@+id/check_5"
         android:layout_width="20dp"
         android:layout_height="20dp"
         android:src="@drawable/check"
-        android:visibility="visible"
+        android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="@+id/text_stat_box5"
         app:layout_constraintEnd_toEndOf="@+id/text_stat_box5"
         android:contentDescription="checked"
         tools:ignore="HardcodedText"/>
 
     <ImageView
+        android:id="@+id/check_6"
         android:layout_width="20dp"
         android:layout_height="20dp"
         android:src="@drawable/check"
-        android:visibility="visible"
+        android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="@+id/text_stat_box6"
         app:layout_constraintEnd_toEndOf="@+id/text_stat_box6"
         android:contentDescription="checked"
         tools:ignore="HardcodedText"/>
 
     <ImageView
+        android:id="@+id/check_7"
         android:layout_width="20dp"
         android:layout_height="20dp"
         android:src="@drawable/check"
-        android:visibility="visible"
+        android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="@+id/text_stat_box7"
         app:layout_constraintEnd_toEndOf="@+id/text_stat_box7"
         android:contentDescription="checked"
         tools:ignore="HardcodedText"/>
-
-
 
 
 

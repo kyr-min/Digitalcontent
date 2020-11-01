@@ -13,23 +13,6 @@
         android:background="#fff"
         >
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_height="350dp"
-            android:layout_width="match_parent"
-            app:layout_constraintTop_toTopOf="parent"
-            android:layout_marginTop="130dp"
-            android:scrollbars="vertical">
-
-            <EditText
-                android:id="@+id/plan_add_box"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:hint="목표를 입력하세요"
-                app:layout_constraintTop_toTopOf="parent"
-                android:inputType="text"
-                tools:ignore="HardcodedText"
-                android:autofillHints="" />
-
 
             <Button
                 android:id="@+id/plan_add_btn"
@@ -37,26 +20,16 @@
                 android:layout_height="0dp"
                 android:layout_marginEnd="24dp"
                 android:layout_marginRight="24dp"
-                android:layout_marginBottom="236dp"
+                android:layout_marginBottom="60dp"
                 android:text="목표추가"
                 android:textSize="15sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 tools:ignore="HardcodedText" />
 
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/plan_recycle"
-                android:scrollbars="vertical"
+            <ListView
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"/>
-
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-
-
-
-
+                android:layout_height="match_parent"
+                android:id="@+id/plan_List"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </FrameLayout>
