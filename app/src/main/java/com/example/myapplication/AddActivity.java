@@ -32,7 +32,6 @@ public class AddActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add);
 
-        plan_add_btn=(Button)findViewById(R.id.plan_add_btn);
         plan_edit=(EditText)findViewById(R.id.txt_question_type);
 
 
@@ -52,7 +51,6 @@ public class AddActivity extends AppCompatActivity {
                 Bundle bundle = new Bundle();
                 bundle.putString("planText", plan_edit.getText().toString());
                 addFragment.setArguments(bundle);
-                finish();
                 return true;
             case R.id.action_cancel:
                 setResult(RESULT_CANCELED);
