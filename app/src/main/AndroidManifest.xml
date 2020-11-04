@@ -18,7 +18,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".RequestAddplan" />
         <activity android:name=".AddArray" />
         <activity android:name=".AddActivity" />
         <activity android:name=".MainActivity">
