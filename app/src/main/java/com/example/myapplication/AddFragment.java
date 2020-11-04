@@ -1,6 +1,7 @@
 package com.example.myapplication;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 
@@ -12,7 +13,9 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -29,27 +32,14 @@ import static android.content.ContentValues.TAG;
 public class AddFragment extends Fragment {
 
     private Button plan_btn;
-    public  static  final int REQUEST_CODE_=1000;
-    private String plan_str;
     private TextView PlanTextView;
-    public AddFragment() {
-        // Required empty public constructor
-    }
-
+    private EditText AddPlan;
+    private Button CheckBtn;
+    public String s="아직 목표가 입력되지않았습니다.";
+    private InputMethodManager imm;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
-
-        Bundle bundle=getArguments();
-        if(bundle!=null){
-            String data1=bundle.getString("planText");
-            Log.d(TAG, data1);
-            //Toast.makeText(this, "저장되었습니다", Toast.LENGTH_SHORT).show();
-        }
-        else{
-            //Toast.makeText(this, "취소되었습니다.", Toast.LENGTH_SHORT).show();
-        }
-
         super.onCreate(savedInstanceState);
     }
 
@@ -57,19 +47,37 @@ public class AddFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-
         View v = (ViewGroup) inflater.inflate(R.layout.fragment_add,container,false);
         plan_btn=(Button) v.findViewById(R.id.plan_add_btn);
+        PlanTextView=(TextView) v.findViewById(R.id.planText);
+        AddPlan=(EditText) v.findViewById(R.id.PlanAdd);
+        CheckBtn=(Button) v.findViewById(R.id.CheckBtn);
+
 
         plan_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent Intent = new Intent(v.getContext(), AddActivity.class);
-                startActivityForResult(Intent, REQUEST_CODE_);
+                CheckBtn.setVisibility(View.VISIBLE);
+                AddPlan.setVisibility(View.VISIBLE);
+                PlanTextView.setVisibility(View.INVISIBLE);
+                plan_btn.setVisibility(View.INVISIBLE);
             }
         });
 
+        CheckBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                s=AddPlan.getText().toString();
+                PlanTextView.setText(s);
+                CheckBtn.setVisibility(View.INVISIBLE);
+                AddPlan.setVisibility(View.INVISIBLE);
+                PlanTextView.setVisibility(View.VISIBLE);
+                plan_btn.setVisibility(View.VISIBLE);
+            }
+        });
+        PlanTextView.setText(s);
         return v;
     }
-}
 
+
+}
