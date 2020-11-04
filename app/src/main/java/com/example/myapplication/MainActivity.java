@@ -5,8 +5,13 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
+import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.view.KeyEvent;
 import android.view.MenuItem;
 
 import com.google.android.material.bottomnavigation.BottomNavigationItemView;
@@ -19,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
     private AddFragment addFragment = new AddFragment();
     private UserFragment userFragment = new UserFragment();
     private SettingFragment settingFragment = new SettingFragment();
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 
+import androidx.core.app.NotificationCompat;
 import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 
@@ -24,12 +25,8 @@ public class SettingFragment extends Fragment {
     Button ReTimeBtn;
     Button ResetPlanBtn;
     Button DevoleperBtn;
-    TimePicker TimePicker;
 
 
-    public SettingFragment() {
-        // Required empty public constructor
-    }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -44,17 +41,12 @@ public class SettingFragment extends Fragment {
         ReTimeBtn=v.findViewById(R.id.planReTime);
         ResetPlanBtn=v.findViewById(R.id.planReset);
         DevoleperBtn=v.findViewById(R.id.devolper);
-        TimePicker=v.findViewById(R.id.TimePicker);
-
 
         ReTimeBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                TimePicker.setVisibility(View.VISIBLE);
-                ReTimeBtn.setVisibility(View.INVISIBLE);
-                DevoleperBtn.setVisibility(View.INVISIBLE);
-                ResetPlanBtn.setVisibility(View.INVISIBLE);
-                
+                TimePickerFragment timePickerFragment = new TimePickerFragment();
+                timePickerFragment.show(getFragmentManager(), "timePicker");
             }
         });
 
@@ -81,17 +73,4 @@ public class SettingFragment extends Fragment {
         });
         return v;
     }
-
-//    public void testAlarm() {
-//        Intent intent = new Intent(getContext(), AlarmReceiver.class);
-//        PendingIntent sender = PendingIntent.getBroadcast(getContext(), 0, intent, PendingIntent.FLAG_CANCEL_CURRENT);
-//        AlarmManager am = (AlarmManager) ContextCompat.getSystemService(getContext());
-//        if(Build.VERSION.SDK_INT>=Build.VERSION_CODES.N){
-//            am.setExactAndAllowWhileIdle(AlarmManager.RTC_WAKEUP,System.currentTimeMillis()+1000, sender);
-//        } else{
-//            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
-//                am.setExact(AlarmManager.RTC_WAKEUP, System.currentTimeMillis()+1000, sender);
-//            }
-//        }
-//    }
 }

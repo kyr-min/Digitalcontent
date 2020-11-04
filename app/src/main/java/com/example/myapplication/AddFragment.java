@@ -73,6 +73,7 @@ public class AddFragment extends Fragment {
                 AddPlan.setVisibility(View.INVISIBLE);
                 PlanTextView.setVisibility(View.VISIBLE);
                 plan_btn.setVisibility(View.VISIBLE);
+                Toast.makeText(getContext(), "목표 : "+s, Toast.LENGTH_SHORT).show();
             }
         });
         PlanTextView.setText(s);

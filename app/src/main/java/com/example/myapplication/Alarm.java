@@ -3,12 +3,11 @@ package com.example.myapplication;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
-import android.util.Log;
+import android.widget.Toast;
 
-public class AlarmReceiver extends BroadcastReceiver {
-
+public class Alarm extends BroadcastReceiver {
     @Override
     public void onReceive(Context context, Intent intent) {
-        Log.e("time", "시간");
+        Toast.makeText(context, "자가진단을 하세요.", Toast.LENGTH_SHORT).show();
     }
 }

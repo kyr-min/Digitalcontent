@@ -38,8 +38,9 @@ public class TimePickerFragment extends DialogFragment implements TimePickerDial
         calendar.set(Calendar.HOUR_OF_DAY, i);
         calendar.set(Calendar.MINUTE, i1);
 
-        Intent intent = new Intent(getContext(), SettingFragment.class);
+        Intent intent = new Intent(getContext(), CheckMyPlan.class);
         PendingIntent operation = PendingIntent.getActivity(getContext(), 0, intent, 0);
         alarmManager.set(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), operation);
+        alarmManager.setRepeating(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(),  AlarmManager.INTERVAL_DAY, operation);
     }
 }

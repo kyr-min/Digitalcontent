@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".UserFragment">
+    tools:context=".UserFragment"
+    android:background="@drawable/background1">
 
     <TextView
         android:id="@+id/text_stat_box1"
@@ -15,8 +16,9 @@
         android:background="@drawable/border"
         android:padding="3dp"
         android:text="1"
+        android:fontFamily="@font/notosanskr_medium"
         android:layout_marginBottom="40dp"
-        android:textColor="@android:color/black"
+        android:textColor="#fff"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -29,7 +31,8 @@
         android:background="@drawable/border"
         android:padding="3dp"
         android:text="2"
-        android:textColor="@android:color/black"
+        android:fontFamily="@font/notosanskr_medium"
+        android:textColor="#fff"
         app:layout_constraintStart_toEndOf="@+id/text_stat_box1"
         app:layout_constraintTop_toTopOf="@+id/text_stat_box1" />
 
@@ -40,7 +43,8 @@
         android:background="@drawable/border"
         android:padding="3dp"
         android:text="3"
-        android:textColor="@android:color/black"
+        android:fontFamily="@font/notosanskr_medium"
+        android:textColor="#fff"
         app:layout_constraintStart_toEndOf="@+id/text_stat_box2"
         app:layout_constraintTop_toTopOf="@+id/text_stat_box2" />
 
@@ -51,7 +55,8 @@
         android:background="@drawable/border"
         android:padding="3dp"
         android:text="4"
-        android:textColor="@android:color/black"
+        android:fontFamily="@font/notosanskr_medium"
+        android:textColor="#fff"
         app:layout_constraintStart_toEndOf="@+id/text_stat_box3"
         app:layout_constraintTop_toTopOf="@+id/text_stat_box3" />
 
@@ -62,7 +67,8 @@
         android:background="@drawable/border"
         android:padding="3dp"
         android:text="5"
-        android:textColor="@android:color/black"
+        android:fontFamily="@font/notosanskr_medium"
+        android:textColor="#fff"
         app:layout_constraintStart_toEndOf="@+id/text_stat_box4"
         app:layout_constraintTop_toTopOf="@+id/text_stat_box4" />
 
@@ -73,7 +79,8 @@
         android:background="@drawable/border"
         android:padding="3dp"
         android:text="6"
-        android:textColor="@android:color/black"
+        android:fontFamily="@font/notosanskr_medium"
+        android:textColor="#fff"
         app:layout_constraintStart_toEndOf="@+id/text_stat_box5"
         app:layout_constraintTop_toTopOf="@+id/text_stat_box5" />
 
@@ -84,7 +91,8 @@
         android:background="@drawable/border"
         android:padding="3dp"
         android:text="7"
-        android:textColor="@android:color/black"
+        android:fontFamily="@font/notosanskr_medium"
+        android:textColor="#fff"
         app:layout_constraintStart_toEndOf="@+id/text_stat_box6"
         app:layout_constraintTop_toTopOf="@+id/text_stat_box6"
         tools:ignore="HardcodedText" />
