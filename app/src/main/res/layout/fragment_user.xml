@@ -12,7 +12,7 @@
         android:id="@+id/changeBackground1"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:src="@drawable/changeBackground1"
+        android:src="@drawable/changebackground1"
         android:visibility="visible"
         />
 
@@ -20,7 +20,7 @@
         android:id="@+id/changeBackground2"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:src="@drawable/changeBackground2"
+        android:src="@drawable/changebackground2"
         android:visibility="invisible"
         />
 
@@ -28,7 +28,7 @@
         android:id="@+id/changeBackground3"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:src="@drawable/changeBackground3"
+        android:src="@drawable/changebackground3"
         android:visibility="invisible"
         />
 
@@ -36,7 +36,7 @@
         android:id="@+id/changeBackground4"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:src="@drawable/changeBackground4"
+        android:src="@drawable/changebackground4"
         android:visibility="invisible"
         />
 
@@ -44,7 +44,7 @@
         android:id="@+id/changeBackground5"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:src="@drawable/changeBackground5"
+        android:src="@drawable/changebackground5"
         android:visibility="invisible"
         />
 
@@ -142,8 +142,10 @@
         android:id="@+id/check_1"
         android:layout_width="20dp"
         android:layout_height="20dp"
-        android:src="@drawable/check"
-        android:visibility="invisible"
+        android:src="@drawable/ic_baseline_check_24"
+        android:visibility="visible"
+        android:layout_marginRight="3dp"
+
         app:layout_constraintBottom_toBottomOf="@+id/text_stat_box1"
         app:layout_constraintEnd_toEndOf="@+id/text_stat_box1"
         android:contentDescription="checked"
@@ -153,7 +155,7 @@
         android:id="@+id/check_2"
         android:layout_width="20dp"
         android:layout_height="20dp"
-        android:src="@drawable/check"
+        android:src="@drawable/ic_baseline_check_24"
         android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="@+id/text_stat_box2"
         app:layout_constraintEnd_toEndOf="@+id/text_stat_box2"
@@ -164,7 +166,7 @@
         android:id="@+id/check_3"
         android:layout_width="20dp"
         android:layout_height="20dp"
-        android:src="@drawable/check"
+        android:src="@drawable/ic_baseline_check_24"
         android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="@+id/text_stat_box3"
         app:layout_constraintEnd_toEndOf="@+id/text_stat_box3"
@@ -175,7 +177,7 @@
         android:id="@+id/check_4"
         android:layout_width="20dp"
         android:layout_height="20dp"
-        android:src="@drawable/check"
+        android:src="@drawable/ic_baseline_check_24"
         android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="@+id/text_stat_box4"
         app:layout_constraintEnd_toEndOf="@+id/text_stat_box4"
@@ -186,7 +188,7 @@
         android:id="@+id/check_5"
         android:layout_width="20dp"
         android:layout_height="20dp"
-        android:src="@drawable/check"
+        android:src="@drawable/ic_baseline_check_24"
         android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="@+id/text_stat_box5"
         app:layout_constraintEnd_toEndOf="@+id/text_stat_box5"
@@ -197,7 +199,7 @@
         android:id="@+id/check_6"
         android:layout_width="20dp"
         android:layout_height="20dp"
-        android:src="@drawable/check"
+        android:src="@drawable/ic_baseline_check_24"
         android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="@+id/text_stat_box6"
         app:layout_constraintEnd_toEndOf="@+id/text_stat_box6"
@@ -208,12 +210,41 @@
         android:id="@+id/check_7"
         android:layout_width="20dp"
         android:layout_height="20dp"
-        android:src="@drawable/check"
+        android:src="@drawable/ic_baseline_check_24"
         android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="@+id/text_stat_box7"
         app:layout_constraintEnd_toEndOf="@+id/text_stat_box7"
         android:contentDescription="checked"
         tools:ignore="HardcodedText"/>
+
+    <TextView
+        android:id="@+id/TextT"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="40dp"
+        android:text="00 : 00"
+        android:fontFamily="@font/notosanskr_medium"
+        android:textColor="#fff"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="400dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="15dp"
+        android:text="알람 시간"
+        android:fontFamily="@font/notosanskr_medium"
+        android:textColor="#fff"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="480dp"/>
+
+
 
 
 

@@ -18,6 +18,7 @@ import java.util.Calendar;
 
 public class TimePickerFragment extends DialogFragment implements TimePickerDialog.OnTimeSetListener {
     private AlarmManager alarmManager;
+    public SettingFragment settingFragment=new SettingFragment();
 
 
     @NonNull
@@ -28,6 +29,11 @@ public class TimePickerFragment extends DialogFragment implements TimePickerDial
         Calendar c = Calendar.getInstance();
         int hour = c.get(Calendar.HOUR_OF_DAY);
         int minute = c.get(Calendar.MINUTE);
+
+        Bundle bundle=new Bundle();
+        bundle.putInt("hourKey", hour);
+        bundle.putInt("minuteKey", minute);
+        settingFragment.setArguments(bundle);
 
         return new TimePickerDialog(getContext(), this, hour, minute, DateFormat.is24HourFormat(getContext()));
     }

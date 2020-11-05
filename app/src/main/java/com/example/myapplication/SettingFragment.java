@@ -39,7 +39,6 @@ public class SettingFragment extends Fragment {
 
         View v = (ViewGroup) inflater.inflate(R.layout.fragment_setting,container,false);
         ReTimeBtn=v.findViewById(R.id.planReTime);
-        ResetPlanBtn=v.findViewById(R.id.planReset);
         DevoleperBtn=v.findViewById(R.id.devolper);
 
         ReTimeBtn.setOnClickListener(new View.OnClickListener() {
@@ -47,14 +46,6 @@ public class SettingFragment extends Fragment {
             public void onClick(View view) {
                 TimePickerFragment timePickerFragment = new TimePickerFragment();
                 timePickerFragment.show(getFragmentManager(), "timePicker");
-            }
-        });
-
-
-        ResetPlanBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                ReTimeBtn.setText("시간 재설정");
             }
         });
 

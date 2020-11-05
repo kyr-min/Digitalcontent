@@ -1,5 +1,6 @@
 package com.example.myapplication;
 
+import android.content.Intent;
 import android.media.Image;
 import android.os.Bundle;
 
@@ -8,7 +9,9 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 public class UserFragment extends Fragment {
     ImageView checkDay1;
@@ -23,9 +26,12 @@ public class UserFragment extends Fragment {
     ImageView changeBackground3;
     ImageView changeBackground4;
     ImageView changeBackground5;
+    TextView TimeTV;
 
     private int count = 0;
     private int Complete = 0;
+    int getHour=0;
+    int getMin=-0;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -49,6 +55,15 @@ public class UserFragment extends Fragment {
         changeBackground3 = (ImageView) v.findViewById(R.id.changeBackground3);
         changeBackground4 = (ImageView) v.findViewById(R.id.changeBackground4);
         changeBackground5 = (ImageView) v.findViewById(R.id.changeBackground5);
+        TimeTV=(TextView) v.findViewById(R.id.TextT);
+
+        Bundle bundle=getArguments();
+        if(bundle!=null){
+            int getHour=getArguments().getInt("hourKey");
+            int getMin=getArguments().getInt("minuteKey");
+            TimeTV.setText(getHour+":"+getMin);
+        }
+
 
 
         return inflater.inflate(R.layout.fragment_user, container, false);
