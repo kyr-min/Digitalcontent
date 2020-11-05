@@ -28,18 +28,15 @@ public class SlideAdapter extends PagerAdapter {
     };
 
     public String[] slide_headings = {
-            "EAT",
-            "SLEEP",
-            "CODE"
+            "PLUTO",
+            "실행방법",
+            "시작하기"
     };
 
     public String[] slide_descs = {
-            "Lorem ipsum dolor sit amet, consectetur adipscing eLit, sed do eiusmod tempor incidiunt ut labore et dolore magna" +
-                    "aliqua",
-            "Lorem ipsum dolor sit amet, consectetur adipscing eLit, sed do eiusmod tempor incidiunt ut labore et dolore magna" +
-                    "aliqua",
-            "Lorem ipsum dolor sit amet, consectetur adipscing eLit, sed do eiusmod tempor incidiunt ut labore et dolore magna" +
-                    "aliqua"
+            "매일 직접 목표를 설정하고 \n 목표를 잘 실천했는지 확인하세요",
+            "목표를 추가하고 \n 직접 설정한 시간에 \n 목표를 잘 실천했는지 설문을 통해 \n 확인하세요",
+            "목표를 잘 실천하고 \n 나만의 행성을 만들어보세요"
     };
 
     @Override
