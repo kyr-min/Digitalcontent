@@ -18,6 +18,12 @@ public class UserFragment extends Fragment {
     ImageView checkDay5;
     ImageView checkDay6;
     ImageView checkDay7;
+    ImageView changeBackground1;
+    ImageView changeBackground2;
+    ImageView changeBackground3;
+    ImageView changeBackground4;
+    ImageView changeBackground5;
+
     private int count = 0;
     private int Complete = 0;
 
@@ -38,6 +44,11 @@ public class UserFragment extends Fragment {
         checkDay5 = (ImageView) v.findViewById(R.id.check_5);
         checkDay6 = (ImageView) v.findViewById(R.id.check_6);
         checkDay7 = (ImageView) v.findViewById(R.id.check_7);
+        changeBackground1 = (ImageView) v.findViewById(R.id.changeBackground1);
+        changeBackground2 = (ImageView) v.findViewById(R.id.changeBackground2);
+        changeBackground3 = (ImageView) v.findViewById(R.id.changeBackground3);
+        changeBackground4 = (ImageView) v.findViewById(R.id.changeBackground4);
+        changeBackground5 = (ImageView) v.findViewById(R.id.changeBackground5);
 
 
         return inflater.inflate(R.layout.fragment_user, container, false);
@@ -50,10 +61,12 @@ public class UserFragment extends Fragment {
         switch (count) {
             case 1: {
                 checkDay1.setVisibility(View.VISIBLE);
+                changeBackground2.setVisibility(View.VISIBLE);
                 break;
             }
             case 2: {
                 checkDay2.setVisibility(View.VISIBLE);
+                changeBackground3.setVisibility(View.VISIBLE);
                 break;
             }
             case 3: {
@@ -62,6 +75,7 @@ public class UserFragment extends Fragment {
             }
             case 4: {
                 checkDay4.setVisibility(View.VISIBLE);
+                changeBackground4.setVisibility(View.VISIBLE);
                 break;
             }
             case 5: {
@@ -74,6 +88,7 @@ public class UserFragment extends Fragment {
             }
             case 7: {
                 checkDay7.setVisibility(View.VISIBLE);
+                changeBackground5.setVisibility(View.VISIBLE);;
                 break;
             }
         }
